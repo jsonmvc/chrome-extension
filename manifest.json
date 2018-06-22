@@ -1,0 +1,22 @@
+{
+  "name": "JSONMVC Chrome-extension",
+  "version": "1.0",
+  "description": "Get insights into your JSONMVC application",
+  "manifest_version": 2,
+  "devtools_page": "devtools.html",
+  "permissions": [
+    "tabs", 
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["inject.js"],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    "content.js"
+  ]
+}
